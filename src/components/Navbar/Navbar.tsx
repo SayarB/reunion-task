@@ -22,8 +22,8 @@ export function Navbar() {
         <li><NavItem selected={selected === "resources"} data="resources" clickHandler={navItemClickHandler}>Resources</NavItem></li>
       </ul>
     </nav>
-    <Button variant="bordered">Login</Button>
-    <Button>Sign Up</Button>
+  <Button onClick={()=>{}}variant="bordered">Login</Button>
+    <Button onClick={()=>{}}>Sign Up</Button>
     </div>
   );
 }
