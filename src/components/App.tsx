@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FilterBar from './FilterBar/FilterBar';
 import { Navbar } from './Navbar/Navbar';
 import SearchBar from './SearchBar/SearchBar';
 export type FilterOptions = {
   location:string
-  date: Date
+  date: string
   propertyType:string
   priceRange:string
 }
 function App() {
+  const defaultFilterOptions:FilterOptions = {
+    location: '',
+    date: '',
+    propertyType: '',
+    priceRange: ''
+  }
+  const [filterOptions, setFilterOptions] = useState(defaultFilterOptions) 
 
   const onSearchButtonClick = (options:FilterOptions)=>{
-    console.log(options)
+    setFilterOptions(options)
   }
   return (
     <div className=' bg-background min-h-[100vh]'>

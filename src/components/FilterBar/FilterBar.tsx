@@ -2,6 +2,8 @@ import React,{useCallback, useState} from 'react'
 import Button from '../Button/Button'
 import DropdownFilterElement from '../DropdownFilterElement/DropdownFilterElement'
 import {FilterOptions} from "../App"
+import DateFilterElement from '../DateFilterElement/DateFilterElement'
+import InputFilterElement from '../InputFilterElement/InputFilterElement'
 type Props = {
   locationOptions:string[]
   priceRangeOptions: string[]
@@ -11,7 +13,7 @@ type Props = {
 
 const FilterBar = (props: Props) => {
   const [location, setLocation] = useState(props.locationOptions[0]||"")
-  const [date, setDate] = useState(new Date())
+  const [date, setDate] = useState("Select Move-in Date")
   const [priceRange, setPriceRange] = useState(props.priceRangeOptions[0]||"")
   const [propertyType, setPropertyType] = useState(props.propertyOptions[0]||"") 
 
@@ -22,20 +24,23 @@ const FilterBar = (props: Props) => {
 
   const onLocationChange = useCallback((changed:string)=>{
     setLocation(changed)
-  },[setPropertyType])
+  },[setLocation])
 
   const onPriceRangeChange = useCallback((changed:string)=>{
     setPriceRange(changed)
-  },[setPropertyType])
+  },[setPriceRange])
 
   const onDateChange = useCallback((changed:string)=>{
-    setDate(new Date(changed))
-  },[setPropertyType])
+    console.log(changed)
+    setDate(changed)
+  },[setDate])
 
   return (
     <div className='flex justify-between bg-white p-5 my-5 rounded-sm font-serif'>
+      <InputFilterElement title='Location' value = {location} onChange={onLocationChange}/>
       <DropdownFilterElement title="Property Type" value={propertyType} options={props.propertyOptions} onChange={onPropertyTypeChange}/>
       <DropdownFilterElement title="Price" value={priceRange} options={props.priceRangeOptions} onChange={onPriceRangeChange}/>
+      <DateFilterElement title={"When"} value={date} onChange={onDateChange}/>
       <Button onClick={()=>{
         const filterOptions: FilterOptions = {
           location: location,
