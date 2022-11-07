@@ -37,7 +37,7 @@ const Thumbnail = (props: Props) => {
           </div>
         </div>
         <p className='text-gray-300 font-serif text-base py-2 border-b-[1px] border-gray-300'>{props.address}</p>
-        <div className='flex text-sm justify-evenly'>
+        <div className='flex text-sm justify-between'>
         <div className='flex items-center font-serif'><img className='w-[20px] h-[20px] m-[3px]' src="bed_icon.png" alt="" /> <p>{props.beds} Bed</p></div>
         <div className='flex items-center font-serif'><img className='w-[20px] h-[20px] m-[3px]' src="bathroom_icon.png" alt="" /> <p>{props.bathrooms} Bathrooms</p></div>
         <div className='flex items-center font-serif'><img className='w-[20px] h-[20px] m-[3px] accent-primary' src="area_icon.png" alt="" /> <p>{props.area} m2</p></div></div>
