@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import FilterBar from './FilterBar/FilterBar';
 import { Navbar } from './Navbar/Navbar';
 import SearchBar from './SearchBar/SearchBar';
+import Thumbnails from './Thumbnails/Thumbnails';
 export type FilterOptions = {
   location:string
   date: string
@@ -27,6 +28,7 @@ function App() {
         <div className='flex justify-between items-center'><h1 className='font-serif text-4xl font-semibold'>Search Properties to Rent</h1> <SearchBar/></div>
         <FilterBar locationOptions={["New York, USA","London, UK", "Kolkata, India"]} priceRangeOptions={["$100-$1000", "$1000-$10000", "$10000-$100000"]} 
         propertyOptions={["Houses", "Flats", "Apartments"]} onSearchButtonClick={onSearchButtonClick} />
+        <Thumbnails {...filterOptions}/>
       </div>
     </div>
   );

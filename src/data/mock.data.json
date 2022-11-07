@@ -1,0 +1,85 @@
+[
+  {
+    "id":1,
+    "name":"Palm Harbour",
+    "image_link":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaOxvK8US-T8n_G-10KLM0SXcDTi9LIBNjYzuN2y5Sjpr0TAY5osehVwVYzpTdHHBkxzQ&usqp=CAU",
+    "price":2095,
+    "type":"house",
+    "beds":3,
+    "bathrooms":2,
+    "address":"2699 Green Valley, Highland Lake, FL",
+    "location":"Florida, USA",
+    "area":"5x7",
+    "favourite":false
+
+  },
+  {
+    "id":2,
+    "name":"Beverly Springfield",
+    "image_link":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaOxvK8US-T8n_G-10KLM0SXcDTi9LIBNjYzuN2y5Sjpr0TAY5osehVwVYzpTdHHBkxzQ&usqp=CAU",
+    "price":2700,
+    "tag":"Popular",
+    "type":"house",
+    "beds":4,
+    "bathrooms":2,
+    "address":"2821 Lake Sevilla, Palm Harbour, TX",
+    "location":"Texas, USA",
+    "area":"6x7.5",
+    "favourite":false
+  },
+  {
+    "id":6,
+    "name":"Grand De Aura",
+    "image_link":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaOxvK8US-T8n_G-10KLM0SXcDTi9LIBNjYzuN2y5Sjpr0TAY5osehVwVYzpTdHHBkxzQ&usqp=CAU",
+    "price":2700,
+    "tag":"Popular",
+    "type":"flat",
+    "beds":4,
+    "bathrooms":2,
+    "address":"2821 Lake Sevilla, Palm Harbour, TX",
+    "location":"Texas, USA",
+    "area":"6x7.5",
+    "favourite":false
+  },
+  {
+    "id":3,
+    "name":"Faulkner Ave",
+    "image_link":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaOxvK8US-T8n_G-10KLM0SXcDTi9LIBNjYzuN2y5Sjpr0TAY5osehVwVYzpTdHHBkxzQ&usqp=CAU",
+    "price":4550,
+    "tag":"Newly Added",
+    "type":"apartment",
+    "beds":4,
+    "bathrooms":3,
+    "address":"909, Woodland St. Michigan, IN",
+    "location":"Indiana, USA",
+    "area":"8x10",
+    "favourite":false
+  },
+  {
+    "id":5,
+    "name":"Simpson's Abode",
+    "image_link":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaOxvK8US-T8n_G-10KLM0SXcDTi9LIBNjYzuN2y5Sjpr0TAY5osehVwVYzpTdHHBkxzQ&usqp=CAU",
+    "price":4230,
+    "tag":"Popular",
+    "type":"flat",
+    "beds":3,
+    "bathrooms":2,
+    "address":"909, Woodland St. Michigan, IN",
+    "location":"Indiana, USA",
+    "area":"8x10",
+    "favourite":false
+  },
+  {
+    "id":4,
+    "name":"The White Horse",
+    "image_link":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaOxvK8US-T8n_G-10KLM0SXcDTi9LIBNjYzuN2y5Sjpr0TAY5osehVwVYzpTdHHBkxzQ&usqp=CAU",
+    "price":2095,
+    "type":"flat",
+    "beds":3,
+    "bathrooms":2,
+    "address":"452 Manhattan, NY",
+    "location":"New York, USA",
+    "area":"5x7",
+    "favourite":false
+  }
+]
