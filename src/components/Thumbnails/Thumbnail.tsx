@@ -24,8 +24,8 @@ const Thumbnail = (props: Props) => {
   }
 
   return (
-    <div className='w-[80%] max-w-[350px] m-auto rounded-lg  my-2 aspect-[.80] shadow-sm overflow-hidden flex flex-col bg-white'>
-      <div className='w-full'><img className='w-full' src={props.image_link} alt={props.name}/></div>
+    <div className='w-[80%] min-w-[320px] max-w-[350px] m-auto rounded-lg  my-2 aspect-[.80] shadow-sm overflow-hidden flex flex-col bg-white'>
+      <div className='w-full overflow-hidden h-[56%]'><img className='w-full' src={props.image_link} alt={props.name}/></div>
       <div className='flex-1 p-3 flex flex-col justify-between'>
         <div className='flex items-center justify-between'>
           <div>
@@ -40,7 +40,7 @@ const Thumbnail = (props: Props) => {
         <div className='flex text-sm justify-between'>
         <div className='flex items-center font-serif'><img className='w-[20px] h-[20px] m-[3px]' src="bed_icon.png" alt="" /> <p>{props.beds} Bed</p></div>
         <div className='flex items-center font-serif'><img className='w-[20px] h-[20px] m-[3px]' src="bathroom_icon.png" alt="" /> <p>{props.bathrooms} Bathrooms</p></div>
-        <div className='flex items-center font-serif'><img className='w-[20px] h-[20px] m-[3px] accent-primary' src="area_icon.png" alt="" /> <p>{props.area} m2</p></div></div>
+        <div className='flex items-center font-serif'><img className='w-[20px] h-[20px] m-[3px] accent-primary' src="area_icon.png" alt="" /> <p>{props.area} m<sup>2</sup></p></div></div>
       </div>
 
       

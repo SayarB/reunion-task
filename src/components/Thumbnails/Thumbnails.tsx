@@ -10,12 +10,38 @@ type Props = {
 
 const Thumbnails = (props: Props) => {
 
+  
+  const matchPropertyType=(ent:any): boolean=>{
+    return ent.type.toLowerCase()===props.propertyType.toLowerCase() || props.propertyType.toLowerCase()==="any"
+  }
+  const matchLocation=(ent:any): boolean=>{
+    if(props.location.toLowerCase()==="any")return true
+    return ent.location.toLowerCase()===props.location.toLowerCase()
+  }
+  const matchDate=(ent:any): boolean=>{
+    if(props.date===""||props.date==="Select Move-in Date")return true
+    if(ent.available)return true
+    const availableFromDate = new Date(ent.availableFrom)
+    const requiredDate = new Date(props.date);
+    return availableFromDate<=requiredDate
+  }
+  const matchPrice=(est:any): boolean=>{
+    if(props.priceRange.toLowerCase()==="any")return true
+    var lowPrice:string|number = props.priceRange.split("-")[0].trim();
+    var highPrice: string|number = props.priceRange.split("-")[1].trim();
+    lowPrice = parseInt(lowPrice.split("$")[1])
+    highPrice = parseInt(highPrice.split("$")[1]);
+    return est.price>=lowPrice&&est.price<=highPrice
+
+  }
+
   return (
     <div className='items-center justify-center'>
       <div className='m-auto max-w-[1200px] grid grid-cols-3 '>
-      { 
+      {
         data.map((estate)=>{
-          return <Thumbnail {...estate}/>
+          if(matchPropertyType(estate)&&matchPrice(estate)&&matchLocation(estate)&&matchDate(estate))
+            return <Thumbnail {...estate}/>
         })
       }
       </div>

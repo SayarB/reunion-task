@@ -36,12 +36,14 @@ const FilterBar = (props: Props) => {
   },[setDate])
 
   return (
-    <div className='flex justify-between bg-white p-5 my-5 rounded-sm font-serif'>
+    <form onSubmit={(e)=>{
+      e.preventDefault()
+    }} className='flex justify-between bg-white p-5 my-5 rounded-sm font-serif'>
       <InputFilterElement title='Location' value = {location} onChange={onLocationChange}/>
       <DropdownFilterElement title="Property Type" value={propertyType} options={props.propertyOptions} onChange={onPropertyTypeChange}/>
       <DropdownFilterElement title="Price" value={priceRange} options={props.priceRangeOptions} onChange={onPriceRangeChange}/>
       <DateFilterElement title={"When"} value={date} onChange={onDateChange}/>
-      <Button onClick={()=>{
+      <Button type={"submit"} onClick={()=>{
         const filterOptions: FilterOptions = {
           location: location,
           date: date,
@@ -50,7 +52,7 @@ const FilterBar = (props: Props) => {
         }
         props.onSearchButtonClick(filterOptions)
       }}>Search</Button>
-    </div>
+    </form>
   )
 }
 

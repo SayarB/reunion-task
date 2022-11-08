@@ -11,10 +11,10 @@ export type FilterOptions = {
 }
 function App() {
   const defaultFilterOptions:FilterOptions = {
-    location: '',
+    location: "any",
     date: '',
-    propertyType: '',
-    priceRange: ''
+    propertyType: "any",
+    priceRange: "any"
   }
   const [filterOptions, setFilterOptions] = useState(defaultFilterOptions) 
 
@@ -26,8 +26,8 @@ function App() {
       <Navbar/>
       <div className='w-[80vw] m-auto mt-10'>
         <div className='flex justify-between items-center'><h1 className='font-serif text-4xl font-semibold'>Search Properties to Rent</h1> <SearchBar/></div>
-        <FilterBar locationOptions={["New York, USA","London, UK", "Kolkata, India"]} priceRangeOptions={["$100-$1000", "$1000-$10000", "$10000-$100000"]} 
-        propertyOptions={["Houses", "Flats", "Apartments"]} onSearchButtonClick={onSearchButtonClick} />
+        <FilterBar locationOptions={["Any","New York, USA","London, UK", "Kolkata, India"]} priceRangeOptions={["Any", "$100-$1000", "$1000-$10000", "$10000-$100000"]} 
+        propertyOptions={["Any","Houses", "Flats", "Apartments"]} onSearchButtonClick={onSearchButtonClick} />
         <Thumbnails {...filterOptions}/>
       </div>
     </div>
