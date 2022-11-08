@@ -9,6 +9,9 @@ module.exports = {
         light:"#E8E5F8",
         background:"#F8F7FD",
       },
+      screens:{
+        filterbarbreakpoint: "1136px"
+      },
       fontFamily:{
        serif:"'Poppins', sans-serif" 
       }

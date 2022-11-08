@@ -41,7 +41,7 @@ const FilterBar = (props: Props) => {
     }} className='flex justify-between bg-white p-5 my-5 rounded-sm font-serif flex-col lg:flex-row max-w-screen-xl m-auto transition-all'>
 
       <p className='text-primary font-semibold cursor-pointer md:hidden' onClick={()=>{setOpen(!open)}}>Filters</p>
-        <div className={`flex-1 flex flex-col ${!open && "hidden"} md:flex lg:flex-row`}>
+        <div className={`flex-1 flex flex-col ${!open && "hidden"} md:flex filterbarbreakpoint:flex-row`}>
           <div className='flex mb-2 flex-1 justify-evenly items-center flex-col md:flex-row'>
             <DropdownFilterElement title='Location' value = {location} onChange={onLocationChange} options={props.locationOptions}/>
             <DropdownFilterElement title="Property Type" value={propertyType} options={props.propertyOptions} onChange={onPropertyTypeChange}/>
