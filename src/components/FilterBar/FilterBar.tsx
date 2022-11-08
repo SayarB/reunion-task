@@ -39,7 +39,7 @@ const FilterBar = (props: Props) => {
     <form onSubmit={(e)=>{
       e.preventDefault()
     }} className='flex justify-between bg-white p-5 my-5 rounded-sm font-serif'>
-      <InputFilterElement title='Location' value = {location} onChange={onLocationChange}/>
+      <InputFilterElement title='Location' value = {location} onChange={onLocationChange} options={props.locationOptions}/>
       <DropdownFilterElement title="Property Type" value={propertyType} options={props.propertyOptions} onChange={onPropertyTypeChange}/>
       <DropdownFilterElement title="Price" value={priceRange} options={props.priceRangeOptions} onChange={onPriceRangeChange}/>
       <DateFilterElement title={"When"} value={date} onChange={onDateChange}/>

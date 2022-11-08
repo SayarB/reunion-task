@@ -24,7 +24,7 @@ const Thumbnail = (props: Props) => {
   }
 
   return (
-    <div className='w-[80%] min-w-[320px] max-w-[350px] m-auto rounded-lg  my-2 aspect-[.80] shadow-sm overflow-hidden flex flex-col bg-white'>
+    <div key={"thumbnail-"+props.id} className='w-[80%] min-w-[320px] max-w-[350px] m-auto rounded-lg  my-2 aspect-[.80] shadow-sm overflow-hidden flex flex-col bg-white'>
       <div className='w-full overflow-hidden h-[56%]'><img className='w-full' src={props.image_link} alt={props.name}/></div>
       <div className='flex-1 p-3 flex flex-col justify-between'>
         <div className='flex items-center justify-between'>

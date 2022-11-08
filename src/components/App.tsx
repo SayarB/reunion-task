@@ -26,7 +26,7 @@ function App() {
       <Navbar/>
       <div className='w-[80vw] m-auto mt-10'>
         <div className='flex justify-between items-center'><h1 className='font-serif text-4xl font-semibold'>Search Properties to Rent</h1> <SearchBar/></div>
-        <FilterBar locationOptions={["Any","New York, USA","London, UK", "Kolkata, India"]} priceRangeOptions={["Any", "$100-$1000", "$1000-$10000", "$10000-$100000"]} 
+        <FilterBar locationOptions={["Any","New York, USA","Texas, USA","Indiana, USA"]} priceRangeOptions={["Any", "$0-$1000", "$1000-$2000", "$2000-$3000","$3000-$4000", "$4000-$5000"]} 
         propertyOptions={["Any","Houses", "Flats", "Apartments"]} onSearchButtonClick={onSearchButtonClick} />
         <Thumbnails {...filterOptions}/>
       </div>
