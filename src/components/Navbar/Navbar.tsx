@@ -12,9 +12,9 @@ export function Navbar() {
 
   return (
     <div className=" bg-white w-[100%]  h-[8vh] min-h-[50px] flex items-center justify-between font-serif ">
-      <h1 className='text-dark font-semibold text-3xl mx-8'>Estatery</h1>
+      <h1 className='text-dark font-serif font-semibold text-xl md:text-2xl mx-8'>Estatery</h1>
       <nav className='flex-1'>
-        <ul className='max-w-[600px] flex justify-evenly items-center '>
+        <ul className='max-w-[600px]  justify-evenly items-center hidden lg:flex'>
           <li><NavItem selected={selected === "rent"} data="rent" clickHandler={navItemClickHandler}>Rent</NavItem></li>
           <li><NavItem selected={selected === "buy"} data="buy" clickHandler={navItemClickHandler}>Buy</NavItem></li>
           <li><NavItem selected={selected === "sell"} data="sell" clickHandler={navItemClickHandler}>Sell</NavItem></li>

@@ -37,7 +37,7 @@ const Thumbnails = (props: Props) => {
 
   return (
     <div className='items-center justify-center'>
-      <div className='m-auto max-w-[1200px] grid grid-cols-3 '>
+      <div className='m-auto my-2 max-w-[1900px] w-[100%] grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 '>
       {
         data.map((estate)=>{
           if(matchPropertyType(estate)&&matchPrice(estate)&&matchLocation(estate)&&matchDate(estate))
