@@ -6,10 +6,12 @@ type Props = {
   date: string
   propertyType:string
   priceRange:string
+  search:string
 }
 
 const Thumbnails = (props: Props) => {
 
+  
   
   const matchPropertyType=(ent:any): boolean=>{
     return ent.type.toLowerCase()===props.propertyType.toLowerCase() || props.propertyType.toLowerCase()==="any"
@@ -34,15 +36,21 @@ const Thumbnails = (props: Props) => {
     return est.price>=lowPrice&&est.price<=highPrice
 
   }
+  const matchSearch = (est:any):boolean=>{
+    
+    return props.search.length===0||est.name.toLowerCase().indexOf(props.search.toLowerCase())>=0;
+  }
 
   return (
     <div className='items-center justify-center'>
       <div className='m-auto my-2 max-w-[1900px] w-[100%] grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 '>
       {
         data.map((estate)=>{
-          if(matchPropertyType(estate)&&matchPrice(estate)&&matchLocation(estate)&&matchDate(estate))
+          if(matchSearch(estate)&&matchPropertyType(estate)&&matchPrice(estate)&&matchLocation(estate)&&matchDate(estate)){
             return <Thumbnail {...estate}/>
+          }else return ""
         })
+        
       }
       </div>
   </div>
