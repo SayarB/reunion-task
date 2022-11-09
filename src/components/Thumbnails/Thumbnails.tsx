@@ -41,16 +41,15 @@ const Thumbnails = (props: Props) => {
     return props.search.length===0||est.name.toLowerCase().indexOf(props.search.toLowerCase())>=0;
   }
 
+  
+  const dataToShow=data.filter((estate)=>matchSearch(estate)&&matchPropertyType(estate)&&matchPrice(estate)&&matchLocation(estate)&&matchDate(estate))
+
+
   return (
     <div className='items-center justify-center'>
       <div className='m-auto my-2 max-w-[1900px] w-[100%] grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 '>
       {
-        data.map((estate)=>{
-          if(matchSearch(estate)&&matchPropertyType(estate)&&matchPrice(estate)&&matchLocation(estate)&&matchDate(estate)){
-            return <Thumbnail {...estate}/>
-          }else return ""
-        })
-        
+        dataToShow.length>0?dataToShow.map((estate)=><Thumbnail {...estate}/>):<div className='flex flex-col w-[100vw] items-center justify-center'><div className=' w-[300px] h-[300px]'><img className='m-auto w-full h-full' src="/not_found_icon.png" alt="" /></div><p className='text-gray-300 text-3xl font-serif font-semibold accent-gray-300'>No Matches Found</p></div>     
       }
       </div>
   </div>
