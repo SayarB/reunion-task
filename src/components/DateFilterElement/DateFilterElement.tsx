@@ -8,8 +8,8 @@ type Props = {
 
 const DateFilterElement = (props: Props) => {
   return (
-    <div className='flex flex-1 mx-2 flex-col relative cursor-pointer w-full md:w-[200px] border-r-[1px] border-gray- my-1'>
-        <p className='text-sm font-serif font-semibold text-gray-500 my-1'>{props.title}</p>
+    <div className='flex flex-1 mx-2 flex-col relative cursor-pointer w-full md:w-[200px] border-r-[1px] border-gray-200 my-1'>
+        <p className='text-sm font-serif font-semibold text-gray-400 my-1'>{props.title}</p>
         <input className=' font-semibold mr-2 focus:outline-none cursor-pointer' type="text" value={props.value} onChange={(e)=>{
           if(e.target.value=="") {
             e.target.type="text"
