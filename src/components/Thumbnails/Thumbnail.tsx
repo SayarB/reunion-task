@@ -39,7 +39,7 @@ const Thumbnail = (props: Props) => {
         </div>
         <p className='text-gray-300 font-serif text-base py-2 border-b-[1px] border-gray-300'>{props.address}</p>
         <div className='flex text-sm justify-between'>
-        <Feature icon='/bed_icon.png'>{props.beds} BedS</Feature>
+        <Feature icon='/bed_icon.png'>{props.beds} Beds</Feature>
         <Feature icon="/bathroom_icon.png">{props.bathrooms} Bathrooms</Feature>
         <Feature icon='/area_icon.png'>{props.area} m<sup>2</sup></Feature>
         </div>
